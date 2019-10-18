@@ -11,11 +11,11 @@
             <input type="text" class="email" placeholder="email">
             <input type="text" class="phone" placeholder="phone">
             <input type="text" class="address" placeholder="address">
-            <button >ADD</button>
+            <button onclick="f1()" >ADD</button>
         </div>
         <center>
         <div class="table-container">
-            <table border="1px" class="table">
+            <table border="1px" class="table" id="tb">
                 <tr>
                     <td class="col1">Name</td>
                     <td class="col2">Email</td>
@@ -25,6 +25,38 @@
             </table>
         </div>
     </center>
+<script>
+    function f1()
+    {
+        var name=document.getElementById('name').value;
+        var email=document.getElementById('email').value;
+        var phone=document.getElementById('phone').value;
+        var address=document.getElementById('address').value;
 
+        var tr=document.createElement('tr');
+
+        var td=document.createElement('td');
+        var node=document.createTextNode(name);
+        td.appendChild(node);
+        tr.appendChild(td);
+
+        var td=document.createElement('td');
+        var node=document.createTextNode(email);
+        td.appendChild(node);
+        tr.appendChild(td);
+
+        var td=document.createElement('td');
+        var node=document.createTextNode(phone);
+        td.appendChild(node);
+        tr.appendChild(td);
+
+        var td=document.createElement('td');
+        var node=document.createTextNode(address);
+        td.appendChild(node);
+        tr.appendChild(td);
+
+        document.getElementById('tb').appendChild(tr);
+    }
+</script>
     </body>
 </html>
