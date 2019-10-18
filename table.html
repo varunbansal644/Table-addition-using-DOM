@@ -5,58 +5,58 @@
         </title>
         <link rel="stylesheet" href="table.css">
     </head>
-    <body>
-        <div class="input-container">
-            <input type="text" class="name" placeholder="name">
-            <input type="text" class="email" placeholder="email">
-            <input type="text" class="phone" placeholder="phone">
-            <input type="text" class="address" placeholder="address">
-            <button onclick="f1()" >ADD</button>
-        </div>
-        <center>
-        <div class="table-container">
-            <table border="1px" class="table" id="tb">
-                <tr>
-                    <td class="col1">Name</td>
-                    <td class="col2">Email</td>
-                    <td class="col3">Phone</td>
-                    <td class="col4">Address</td>
-                </tr>
-            </table>
-        </div>
-    </center>
+<body>
+<div class="input-container">
+<input type="text" id="name" placeholder="name">
+<input type="email" id="email" placeholder="email">
+<input type="text" id="phone" placeholder="phone">
+<input type="text" id="address" placeholder="address">
+<button  id="button">add</button>
+</div>
+<center>
+<div class="table-container">
+    <table id="table" border="1px">
+        <tr>
+            <td class="col1">Name</td>
+            <td class="col2">Email</td>
+            <td class="col3">Phone</td>
+            <td class="col4">Address</td>
+        </tr>
+    </table>
+</div>
+</center>
 <script>
+    document.getElementById("button").addEventListener("click",f1);
     function f1()
     {
-        var name=document.getElementById('name').value;
-        var email=document.getElementById('email').value;
-        var phone=document.getElementById('phone').value;
-        var address=document.getElementById('address').value;
+   var n=document.getElementById('name').value;
+   var e=document.getElementById("email").value;
+   var p=document.getElementById("phone").value;
+   var a=document.getElementById("address").value;
 
-        var tr=document.createElement('tr');
+  var tr = document.createElement("tr");
 
-        var td=document.createElement('td');
-        var node=document.createTextNode(name);
-        td.appendChild(node);
-        tr.appendChild(td);
+  var td = document.createElement("td");
+  var node = document.createTextNode(n);
+  td.appendChild(node);
+  tr.appendChild(td);
 
-        var td=document.createElement('td');
-        var node=document.createTextNode(email);
-        td.appendChild(node);
-        tr.appendChild(td);
+  var td = document.createElement("td");
+  var node = document.createTextNode(e);
+  td.appendChild(node);
+  tr.appendChild(td);
 
-        var td=document.createElement('td');
-        var node=document.createTextNode(phone);
-        td.appendChild(node);
-        tr.appendChild(td);
+  var td = document.createElement("td");
+  var node = document.createTextNode(p);
+  td.appendChild(node);
+  tr.appendChild(td);
 
-        var td=document.createElement('td');
-        var node=document.createTextNode(address);
-        td.appendChild(node);
-        tr.appendChild(td);
-
-        document.getElementById('tb').appendChild(tr);
+  var td = document.createElement("td");
+  var node = document.createTextNode(a);
+  td.appendChild(node);
+  tr.appendChild(td);
+document.getElementById('table').appendChild(tr);
     }
 </script>
-    </body>
+</body>
 </html>
