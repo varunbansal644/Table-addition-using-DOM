@@ -1,1 +1,1 @@
-This table manipulation through DOM
+Table manipulation through DOM
